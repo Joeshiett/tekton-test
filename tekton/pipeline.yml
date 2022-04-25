@@ -5,7 +5,11 @@ metadata:
 spec:
   params:
     - name: IMAGE
+			description: Image description
+			default: joeshiett/nodejs-app
     - name: TAG
+			description: Preferred tag
+			default: v1
   workspaces:
     - name: linked-workspace
   tasks:
@@ -43,7 +47,7 @@ spec:
       params:
         - name: script
           value: |
-            kubectl apply --filename tekton-test/manifest/deploy.yml
+            kubectl apply --filename manifest/deploy.yml
       workspaces:
         - name: manifest-dir
           workspace: linked-workspace
