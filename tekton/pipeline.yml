@@ -6,7 +6,8 @@ spec:
   params:
     - name: IMAGE
       description: Image description
-      default: joeshiett/nodejs-app
+      type: string
+      default: "docker.io/joeshiett/nodejs-app"
     - name: TAG
       description: Preferred tag
       default: v1
@@ -36,7 +37,7 @@ spec:
           workspace: linked-workspace
       params:
         - name: IMAGE
-          value: $(params.IMAGE):$(params.TAG)
+          value: "$(params.IMAGE):$(params.TAG)"
         - name: CONTEXT
           value: "tekton/src"
         - name: FORMAT

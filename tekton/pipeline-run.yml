@@ -8,9 +8,9 @@ spec:
     name: nodejs-pipeline
   params:
     - name: IMAGE
-      value: joeshiett/nodejs-app
+      value: docker.io/joeshiett/nodejs-app
     - name: TAG
-      value: latest
+      value: v1
   workspaces:
     - name: linked-workspace
       volumeClaimTemplate:
