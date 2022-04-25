@@ -33,7 +33,7 @@ spec:
       runAfter:
         - fetch-repository
       workspaces:
-        - name: 
+        - name: source
           workspace: linked-workspace
       params:
         - name: IMAGE
