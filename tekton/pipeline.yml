@@ -5,11 +5,11 @@ metadata:
 spec:
   params:
     - name: IMAGE
-			description: Image description
-			default: joeshiett/nodejs-app
+      description: Image description
+      default: joeshiett/nodejs-app
     - name: TAG
-			description: Preferred tag
-			default: v1
+      description: Preferred tag
+      default: v1
   workspaces:
     - name: linked-workspace
   tasks:
