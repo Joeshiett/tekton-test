@@ -1,0 +1,22 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: nodejs-deploy
+spec:
+  serviceAccountName: docker-login
+  pipelineRef:
+    name: nodejs-pipeline
+  params:
+    - name: IMAGE
+      value: joeshiett/nodejs-app
+    - name: TAG
+      value: latest
+  workspaces:
+    - name: linked-workspace
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 10Gi
