@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels: 
+        app: nodejs-app
+    spec:                   
+      containers: 
+      - name: nodejs-app 
+        image: joeshiett/nodejs-app:latest
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: nodejs-app
+  ports:
+  - port: 3000
