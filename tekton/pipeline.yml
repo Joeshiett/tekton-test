@@ -39,9 +39,7 @@ spec:
         - name: IMAGE
           value: $(params.IMAGE):$(params.TAG)
         - name: CONTEXT
-          value: "tekton"
-				- name: DOCKERFILE
-          value: "src/Dockerfile"
+          value: "tekton/src"
         - name: FORMAT
           value: "docker"
     - name: create-deployment
