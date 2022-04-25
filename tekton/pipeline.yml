@@ -33,13 +33,13 @@ spec:
       runAfter:
         - fetch-repository
       workspaces:
-        - name: source
+        - name: 
           workspace: linked-workspace
       params:
         - name: IMAGE
           value: "$(params.IMAGE):$(params.TAG)"
         - name: CONTEXT
-          value: "tekton/src"
+          value: "src"
         - name: FORMAT
           value: "docker"
     - name: create-deployment
