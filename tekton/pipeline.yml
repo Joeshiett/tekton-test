@@ -48,7 +48,7 @@ spec:
       params:
         - name: script
           value: |
-            sudo kubectl apply --filename https://raw.githubusercontent.com/Joeshiett/tekton-test/main/manifest/deploy.yml
+            kubectl apply --filename https://raw.githubusercontent.com/Joeshiett/tekton-test/main/manifest/deploy.yml
       workspaces:
         - name: manifest-dir
           workspace: linked-workspace
