@@ -5,11 +5,7 @@ metadata:
 spec:
   params:
     - name: IMAGE
-      description: Docker image repository name
-      default: joeshiett/nodejs-app
     - name: TAG
-      description: Tag value
-      default: latest
   workspaces:
     - name: linked-workspace
       optional: true
@@ -52,4 +48,3 @@ spec:
       workspaces:
         - name: manifest-dir
           workspace: linked-workspace
-	
