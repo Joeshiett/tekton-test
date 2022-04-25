@@ -8,6 +8,7 @@ spec:
     - name: TAG
   workspaces:
     - name: linked-workspace
+      optional: false
   tasks:
     - name: fetch-repository
       taskRef:
