@@ -5,10 +5,12 @@ metadata:
 spec:
   params:
     - name: IMAGE
-			value: joeshiett/nodejs-app
+      description: Docker image repository name
+      default: joeshiett/nodejs-app
     - name: TAG
-			value: latest
-	workspaces:
+      description: Tag value
+      default: latest
+  workspaces:
     - name: linked-workspace
       optional: true
   tasks:
