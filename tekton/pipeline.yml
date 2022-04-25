@@ -39,7 +39,9 @@ spec:
         - name: IMAGE
           value: $(params.IMAGE):$(params.TAG)
         - name: CONTEXT
-          value: "ui"
+          value: "tekton"
+				- name: DOCKERFILE
+          value: "src/Dockerfile"
         - name: FORMAT
           value: "docker"
     - name: create-deployment
@@ -52,3 +54,4 @@ spec:
       workspaces:
         - name: manifest-dir
           workspace: linked-workspace
+	
