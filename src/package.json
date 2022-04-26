@@ -1,23 +1,13 @@
 {
-    "name": "tekton-test",
+    "name": "docker_web_app",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "dependencies": {
-      "express": "^4.17.3"
-    },
-    "devDependencies": {},
+    "description": "Node.js on Docker",
+    "author": "Joseph Eshiett joseph.eshiett@gmail.com",
+    "main": "server.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "node server.js"
     },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Joeshiett/tekton-test.git"
-    },
-    "author": "Joseph Eshiett",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/Joeshiett/tekton-test/issues"
-    },
-    "homepage": "https://github.com/Joeshiett/tekton-test#readme"
+    "dependencies": {
+      "express": "^4.16.1"
+    }
   }
