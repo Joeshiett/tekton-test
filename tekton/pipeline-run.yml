@@ -10,7 +10,7 @@ spec:
     - name: IMAGE
       value: docker.io/joeshiett/nodejs-app
     - name: TAG
-      value: v1
+      value: latest
   workspaces:
     - name: linked-workspace
       volumeClaimTemplate:

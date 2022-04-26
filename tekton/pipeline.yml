@@ -10,7 +10,7 @@ spec:
       default: "docker.io/joeshiett/nodejs-app"
     - name: TAG
       description: Preferred tag
-      default: v1
+      default: latest
   workspaces:
     - name: linked-workspace
   tasks:
