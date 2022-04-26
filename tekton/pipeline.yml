@@ -10,7 +10,7 @@ spec:
       default: "docker.io/joeshiett/nodejs-app"
     - name: TAG
       description: Preferred tag
-      default: latest
+      default: v2
   workspaces:
     - name: linked-workspace
   tasks:
@@ -45,6 +45,8 @@ spec:
     - name: create-deployment
       taskRef:
         name: kubernetes-actions
+      runAfter:
+        - build-push-image
       params:
         - name: script
           value: |
